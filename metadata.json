@@ -1,0 +1,6 @@
+{
+  "name": "Kech (ከች) - Asela On-Demand Delivery Platform",
+  "description": "Multi-tenant food, goods, and courier delivery platform engineered for Asela, Ethiopia with trilingual localization (English, አማርኛ, Afaan Oromoo), courier dispatch, and multi-category retail inventory.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

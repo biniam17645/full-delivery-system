@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kechPurple: #6A1B9A;
+  --color-kechPurpleDark: #4A126B;
+  --color-kechPurpleLight: #8E24AA;
+  --color-kechOrange: #FF9800;
+  --color-kechOrangeDark: #E68A00;
+  --color-kechOrangeLight: #FFB74D;
+  --color-kechTeal: #009688;
+}
+
+@layer base {
+  :root {
+    --color-primary: #6A1B9A;
+    --color-primary-light: #8E24AA;
+    --color-secondary: #FF9800;
+    --color-teal: #009688;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* SVG Bicycle Animation across top track under navigation */
+@keyframes rideAcross {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.animated-bike-track {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 44px;
+  background: linear-gradient(90deg, rgba(106, 27, 154, 0.06), rgba(255, 152, 0, 0.1), rgba(106, 27, 154, 0.06));
+  border-bottom: 1px solid rgba(106, 27, 154, 0.12);
+}
+
+.animated-bike {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  animation: rideAcross 15s linear infinite;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Asela Map Pulse Animations */
+@keyframes mapPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.map-ping {
+  animation: mapPulse 2s ease-in-out infinite;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(106, 27, 154, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(106, 27, 154, 0.5);
+}
